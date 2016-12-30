@@ -71,7 +71,7 @@ class BokehPropDirective(BokehDirective):
         rst_text = PROP_DETAIL.render(
             name=prop_name,
             module=self.options['module'],
-            type_info=prop._sphinx_type(),
+            type_info=prop.property._sphinx_type(),
             doc="" if prop.__doc__ is None else textwrap.dedent(prop.__doc__),
         )
 
